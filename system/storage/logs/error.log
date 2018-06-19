@@ -1,0 +1,5 @@
+2018-06-14 18:28:38 - PHP Notice:  Undefined index: config_telephone3 in C:\OSPanel\domains\argoclimat\admin\controller\setting\setting.php on line 1236
+2018-06-14 18:28:38 - PHP Notice:  Undefined index: telephone5 in C:\OSPanel\domains\argoclimat\admin\controller\setting\setting.php on line 286
+2018-06-14 18:31:47 - PHP Notice:  Undefined index: config_telephone3 in C:\OSPanel\domains\argoclimat\admin\controller\setting\setting.php on line 1236
+2018-06-14 18:31:47 - PHP Notice:  Undefined index: telephone5 in C:\OSPanel\domains\argoclimat\admin\controller\setting\setting.php on line 286
+2018-06-14 18:33:48 - PHP Notice:  Undefined index: config_telephone3 in C:\OSPanel\domains\argoclimat\admin\controller\setting\setting.php on line 1236
