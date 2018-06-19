@@ -145,6 +145,55 @@
                   <?php } ?>
                 </div>
               </div>
+              <div class="form-group ">
+                  <label class="col-sm-2 control-label" for=""></label>
+                  <div class="col-sm-10">
+                    <div class="expand_action_btn">Дополнительные телефоны</div>
+                  </div>
+                </div>
+                <script type="text/javascript">
+                  $('.expand_action_btn').on('click', function() {
+                    $('.expandable-section').toggleClass('expand');
+                  });
+                </script>
+                <style>
+                .expand_action_btn{
+                  cursor: pointer;
+                  color: blue;
+                }
+                .expandable-section{
+                  height:0;
+                  overflow: hidden;
+                  transition: height 0.2s linear;
+                }
+                .expandable-section.expand{
+                  height:auto;
+                  transition: height 0.2s linear;
+                }
+              </style>
+              <div class="expandable-section">
+                <div class="form-group ">
+                  <label class="col-sm-2 control-label" for="input-telephone2"><?php echo $entry_telephone2; ?></label>
+                  <div class="col-sm-10">
+                    <input type="text" name="config_telephone2" value="<?php echo $config_telephone2; ?>" placeholder="<?php echo $entry_telephone2; ?>" id="input-telephone2" class="form-control" />
+                    
+                  </div>
+                </div>
+                <div class="form-group ">
+                  <label class="col-sm-2 control-label" for="input-telephone3"><?php echo $entry_telephone3; ?></label>
+                  <div class="col-sm-10">
+                    <input type="text" name="config_telephone3" value="<?php echo $config_telephone3; ?>" placeholder="<?php echo $entry_telephone3; ?>" id="input-telephone3" class="form-control" />
+                    
+                  </div>
+                </div>
+                <div class="form-group ">
+                  <label class="col-sm-2 control-label" for="input-telephone4"><?php echo $entry_telephone4; ?></label>
+                  <div class="col-sm-10">
+                    <input type="text" name="config_telephone4" value="<?php echo $config_telephone4; ?>" placeholder="<?php echo $entry_telephone4; ?>" id="input-telephone4" class="form-control" />
+                    
+                  </div>
+                </div>
+              </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-fax"><?php echo $entry_fax; ?></label>
                 <div class="col-sm-10">

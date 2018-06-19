@@ -23,6 +23,9 @@ function getURLVar(key) {
 }
 
 $(document).ready(function() {
+
+	
+	
 	//Form Submit for IE Browser
 	$('button[type=\'submit\']').on('click', function() {
 		$("form[id*='form-']").submit();
@@ -101,6 +104,7 @@ $(document).ready(function() {
 	});
 
 
+	
 
 	// Image Manager
 	$(document).on('click', 'a[data-toggle=\'image\']', function(e) {

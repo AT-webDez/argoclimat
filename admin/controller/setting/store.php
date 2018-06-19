@@ -200,6 +200,9 @@ class ControllerSettingStore extends Controller {
 		$data['entry_geocode'] = $this->language->get('entry_geocode');
 		$data['entry_email'] = $this->language->get('entry_email');
 		$data['entry_telephone'] = $this->language->get('entry_telephone');
+		$data['entry_telephone2'] = $this->language->get('entry_telephone2');
+		$data['entry_telephone3'] = $this->language->get('entry_telephone3');
+		$data['entry_telephone4'] = $this->language->get('entry_telephone4');
 		$data['entry_fax'] = $this->language->get('entry_fax');
 		$data['entry_image'] = $this->language->get('entry_image');
 		$data['entry_open'] = $this->language->get('entry_open');
@@ -304,6 +307,24 @@ class ControllerSettingStore extends Controller {
 			$data['error_telephone'] = $this->error['telephone'];
 		} else {
 			$data['error_telephone'] = '';
+		}
+
+		if (isset($this->error['telephone2'])) {
+			$data['error_telephone2'] = $this->error['telephone2'];
+		} else {
+			$data['error_telephone2'] = '';
+		}
+
+		if (isset($this->error['telephone3'])) {
+			$data['error_telephone3'] = $this->error['telephone3'];
+		} else {
+			$data['error_telephone3'] = '';
+		}
+
+		if (isset($this->error['telephone4'])) {
+			$data['error_telephone4'] = $this->error['telephone4'];
+		} else {
+			$data['error_telephone4'] = '';
 		}
 
 		if (isset($this->error['customer_group_display'])) {
@@ -481,6 +502,30 @@ class ControllerSettingStore extends Controller {
 			$data['config_telephone'] = $store_info['config_telephone'];
 		} else {
 			$data['config_telephone'] = '';
+		}
+
+		if (isset($this->request->post['config_telephone2'])) {
+			$data['config_telephone2'] = $this->request->post['config_telephone2'];
+		} elseif (isset($store_info['config_telephone2'])) {
+			$data['config_telephone2'] = $store_info['config_telephone2'];
+		} else {
+			$data['config_telephone2'] = '';
+		}
+
+		if (isset($this->request->post['config_telephone3'])) {
+			$data['config_telephone3'] = $this->request->post['config_telephone3'];
+		} elseif (isset($store_info['config_telephone3'])) {
+			$data['config_telephone3'] = $store_info['config_telephone3'];
+		} else {
+			$data['config_telephone3'] = '';
+		}
+
+		if (isset($this->request->post['config_telephone4'])) {
+			$data['config_telephone4'] = $this->request->post['config_telephone4'];
+		} elseif (isset($store_info['config_telephone4'])) {
+			$data['config_telephone4'] = $store_info['config_telephone4'];
+		} else {
+			$data['config_telephone4'] = '';
 		}
 
 		if (isset($this->request->post['config_fax'])) {
@@ -779,6 +824,18 @@ class ControllerSettingStore extends Controller {
 
 		if ((utf8_strlen($this->request->post['config_telephone']) < 3) || (utf8_strlen($this->request->post['config_telephone']) > 32)) {
 			$this->error['telephone'] = $this->language->get('error_telephone');
+		}
+
+		if ((utf8_strlen($this->request->post['config_telephone2']) < 3) || (utf8_strlen($this->request->post['config_telephone2']) > 32)) {
+			$this->error['telephone2'] = $this->language->get('error_telephone2');
+		}
+
+		if ((utf8_strlen($this->request->post['config_telephone3']) < 3) || (utf8_strlen($this->request->post['config_telephone3']) > 32)) {
+			$this->error['telephone3'] = $this->language->get('error_telephone3');
+		}
+
+		if ((utf8_strlen($this->request->post['config_telephone4']) < 3) || (utf8_strlen($this->request->post['config_telephone4']) > 32)) {
+			$this->error['telephone4'] = $this->language->get('error_telephone4');
 		}
 
 		if (!empty($this->request->post['config_customer_group_display']) && !in_array($this->request->post['config_customer_group_id'], $this->request->post['config_customer_group_display'])) {
